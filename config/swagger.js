@@ -5,7 +5,7 @@ const options = {
   definition: {
     openapi: "3.0.0",
     info: {
-      title: "C L & Associates Contact API",
+      title: "D L & Associates Contact API",
       version: "1.0.0",
       description: "API documentation for Contact Form Submission",
     },

@@ -23,9 +23,9 @@ mongoose
 // Routes
 app.use("/api", require("./routes/contact.routes"));
 
-app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
+app.use("/dl-doc", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
-app.get("/cl", (req, res) => {
+app.get("/dl", (req, res) => {
   res.send("yes running C L and Associate");
 });
 
