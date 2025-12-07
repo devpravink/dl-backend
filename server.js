@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const cors = require("cors");
+const { swaggerUi, swaggerSpec } = require("./config/swagger");
 
 dotenv.config();
 
@@ -21,6 +22,8 @@ mongoose
 
 // Routes
 app.use("/api", require("./routes/contact.routes"));
+
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 app.get("/cl", (req, res) => {
   res.send("yes running C L and Associate");
